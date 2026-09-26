@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeHelp</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- Background Glow -->
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar glass">
+
+        <div class="logo">
+            <span>&lt;/&gt;</span>
+            CodeHelp
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">
+               Home
+            </a>
+
+            <a href="/problems-page">Problems</a>
+
+            <a href="/my-problems">My Problems</a>
+
+            <a href="/messages">Messages</a>
+
+            <div id="account-area">
+                <a href="/login" class="login-btn">
+                    Login
+                </a>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🚀 Student Coding Community
+            </div>
+
+            <h1>
+                Stuck with code?
+                <span>Get Help.</span>
+            </h1>
+
+            <p>
+                Post your coding problem, connect with fellow students,
+                and solve programming errors together.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="/create-problem"
+                    class="primary-btn">
+
+                    + Post a Problem
+
+                </a>
+
+                <a
+                    href="/problems-page"
+                    class="secondary-btn">
+
+                    Explore Problems
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Problems Section -->
+    <main class="problems-container">
+
+        <div class="section-heading">
+
+            <div>
+                <h2>Recent Problems</h2>
+
+                <p>
+                    See what other students are struggling with
+                </p>
+            </div>
+            <a
+                href="/problems-page"
+                class="problem-count">
+
+                Problems
+
+            </a>
+
+        </div>
+
+
+        <!-- Problems will come from Java -->
+        <div id="problems-container" class="problems-grid">
+
+            <div class="loading glass">
+                Loading problems...
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="/js/app.js"></script>
+
+</body>
+
+</html>

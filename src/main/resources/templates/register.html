@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeHelp - Register</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+
+        .auth-page {
+            min-height: 80vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px 20px;
+        }
+
+        .auth-card {
+            width: 100%;
+            max-width: 430px;
+
+            padding: 35px;
+
+            border-radius: 24px;
+        }
+
+        .auth-logo {
+            text-align: center;
+
+            font-size: 28px;
+            font-weight: 700;
+
+            margin-bottom: 10px;
+        }
+
+        .auth-logo span {
+            color: #8ea7ff;
+        }
+
+        .auth-subtitle {
+            text-align: center;
+
+            color: #929bb3;
+
+            margin-bottom: 30px;
+
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #cbd2e8;
+
+            font-size: 14px;
+        }
+
+        .form-input {
+            width: 100%;
+
+            padding: 14px 15px;
+
+            border-radius: 12px;
+
+            outline: none;
+
+            color: white;
+
+            background: rgba(255,255,255,0.07);
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            font-size: 14px;
+        }
+
+        .form-input:focus {
+            border-color: rgba(126,145,255,0.6);
+
+            background: rgba(255,255,255,0.09);
+        }
+
+        .form-input::placeholder {
+            color: #70798f;
+        }
+
+        .register-submit {
+            width: 100%;
+
+            padding: 14px;
+
+            margin-top: 8px;
+
+            border-radius: 12px;
+
+            color: white;
+
+            background: linear-gradient(
+                135deg,
+                #526dff,
+                #8757e8
+            );
+
+            font-size: 15px;
+        }
+
+        .register-submit:hover {
+            transform: translateY(-2px);
+        }
+
+        .register-message {
+            text-align: center;
+
+            margin-top: 18px;
+
+            font-size: 14px;
+        }
+
+        .login-link {
+            text-align: center;
+
+            margin-top: 22px;
+
+            color: #929bb3;
+
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #aebcff;
+
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+
+
+    <!-- Navbar -->
+
+    <nav class="navbar glass">
+
+        <div class="logo">
+            <span>&lt;/&gt;</span>
+            CodeHelp
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Problems
+            </a>
+
+            <a href="/login">
+                Login
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Register -->
+
+    <main class="auth-page">
+
+        <div class="auth-card glass">
+
+            <div class="auth-logo">
+
+                <span>&lt;/&gt;</span>
+                CodeHelp
+
+            </div>
+
+
+            <p class="auth-subtitle">
+
+                Create your student account
+
+            </p>
+
+
+            <form id="registerForm">
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <input
+                        id="name"
+                        class="form-input"
+                        type="text"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        id="email"
+                        class="form-input"
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        id="password"
+                        class="form-input"
+                        type="password"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="register-submit">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+
+            <div
+                id="registerMessage"
+                class="register-message">
+            </div>
+
+
+            <div class="login-link">
+
+                Already have an account?
+
+                <a href="/login">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="/js/register.js"></script>
+
+</body>
+
+</html>

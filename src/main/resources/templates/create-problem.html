@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post Problem - CodeHelp</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar glass">
+
+    <div class="logo">
+        &lt;/&gt; CodeHelp
+    </div>
+
+    <div class="nav-links">
+        <a href="/"> Home</a>
+        <a href="/problems-page">Problems</a>
+        <a href="/my-problems">My Problems</a>
+        <a href="/messages">Messages</a>
+
+        <div id="account-area"></div>
+    </div>
+
+</nav>
+
+
+<main class="create-container">
+
+    <div class="create-header">
+
+        <p class="eyebrow">ASK FOR HELP</p>
+
+        <h1>Post a Coding Problem</h1>
+
+        <p>
+            Share your coding problem and let other students help you.
+        </p>
+
+    </div>
+
+
+    <form id="problemForm" class="problem-form glass">
+
+        <div class="form-group">
+
+            <label for="title">
+                Problem Title
+            </label>
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Example: Python loop is not working"
+                required>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="language">
+                Programming Language
+            </label>
+
+            <select id="language" required>
+
+                <option value="">
+                    Select language
+                </option>
+
+                <option value="Java">
+                    Java
+                </option>
+
+                <option value="Python">
+                    Python
+                </option>
+
+                <option value="JavaScript">
+                    JavaScript
+                </option>
+
+                <option value="C">
+                    C
+                </option>
+
+                <option value="C++">
+                    C++
+                </option>
+
+                <option value="HTML/CSS">
+                    HTML/CSS
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="description">
+                Describe Your Problem
+            </label>
+
+            <textarea
+                id="description"
+                rows="5"
+                placeholder="Explain what you are trying to do..."
+                required></textarea>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="code">
+                Your Code
+            </label>
+
+            <textarea
+                id="code"
+                rows="10"
+                placeholder="Paste your code here..."
+                required></textarea>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="errorMessage">
+                Error Message
+            </label>
+
+            <textarea
+                id="errorMessage"
+                rows="4"
+                placeholder="Paste the error message here..."></textarea>
+
+        </div>
+
+
+        <div id="formMessage"></div>
+
+
+        <div class="form-actions">
+
+            <button
+                type="button"
+                class="secondary-btn"
+                onclick="window.location.href='/my-problems'">
+
+                Cancel
+
+            </button>
+
+            <button
+                type="submit"
+                class="primary-btn">
+
+                Post Problem →
+
+            </button>
+
+        </div>
+
+    </form>
+
+</main>
+
+<script src="/js/app.js"></script>
+<script src="/js/create-problem.js"></script>
+
+</body>
+
+</html>

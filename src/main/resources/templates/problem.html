@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CodeHelp - Problem</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+
+        .problem-page {
+            width: 90%;
+            max-width: 1100px;
+            margin: 60px auto 100px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 10px 16px;
+
+            color: #cbd2e8;
+            text-decoration: none;
+
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.14);
+            transform: translateX(-3px);
+        }
+
+        .problem-header {
+            padding: 30px;
+            border-radius: 22px;
+            margin-bottom: 20px;
+        }
+
+        .problem-header h1 {
+            font-size: 38px;
+            margin: 15px 0;
+        }
+
+        .problem-description-large {
+            color: #aab2c9;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .section-card {
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .error-large {
+            padding: 16px;
+
+            border-radius: 10px;
+
+            background: rgba(255,70,70,0.08);
+
+            border: 1px solid rgba(255,70,70,0.15);
+
+            color: #ff9c9c;
+
+            font-family: monospace;
+        }
+
+        .code-box {
+            background: rgba(0,0,0,0.35);
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            margin: 0;
+
+            color: #d9def0;
+
+            font-family: Consolas, monospace;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            white-space: pre-wrap;
+        }
+
+        .help-large-btn {
+            width: 100%;
+
+            padding: 16px;
+
+            border-radius: 12px;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            background: linear-gradient(
+                135deg,
+                #526dff,
+                #8757e8
+            );
+
+            box-shadow:
+                0 10px 30px rgba(82,109,255,0.25);
+        }
+
+        .help-large-btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 15px 40px rgba(82,109,255,0.4);
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- Background -->
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar glass">
+
+        <div class="logo">
+            <span>&lt;/&gt;</span>
+            CodeHelp
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/"> Home</a>
+
+            <a href="/problems-page">Problems</a>
+
+            <a href="/my-problems">My Problems</a>
+
+            <a href="/messages">Messages</a>
+
+            <div id="account-area"></div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Problem -->
+    <main class="problem-page">
+
+        <a href="/" class="back-btn">
+            ← Back to Problems
+        </a>
+
+
+        <section class="problem-header glass">
+
+            <span id="language"
+                  class="language">
+                Loading...
+            </span>
+
+            <h1 id="title">
+                Loading problem...
+            </h1>
+
+            <p id="description"
+               class="problem-description-large">
+                Loading...
+            </p>
+
+        </section>
+
+
+        <!-- Error -->
+        <section class="section-card glass">
+
+            <h2 class="section-title">
+                ⚠️ Error
+            </h2>
+
+            <div id="error"
+                 class="error-large">
+                Loading...
+            </div>
+
+        </section>
+
+
+        <!-- Code -->
+        <section class="section-card glass">
+
+            <h2 class="section-title">
+                💻 Student's Code
+            </h2>
+
+            <div class="code-box">
+
+                <pre id="code">
+Loading...
+                </pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- Help -->
+        <section class="section-card glass">
+
+            <button
+                id="helpButton"
+                class="help-large-btn">
+
+                💬 Help This Student
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/problem.js"></script>
+
+</body>
+
+</html>

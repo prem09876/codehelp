@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeHelp - Chat</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+
+        .chat-page {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+        }
+
+        .chat-container {
+            height: 650px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            padding: 22px 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .chat-header h2 {
+            margin-bottom: 5px;
+        }
+
+        .chat-header p {
+            color: #929bb3;
+            font-size: 13px;
+        }
+
+        .messages {
+            flex: 1;
+            padding: 25px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .message {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 15px;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .received {
+            align-self: flex-start;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .sent {
+            align-self: flex-end;
+            background: linear-gradient(
+                135deg,
+                #526dff,
+                #8757e8
+            );
+        }
+
+        .chat-input-area {
+            padding: 18px;
+            display: flex;
+            gap: 10px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 14px 16px;
+
+            border-radius: 12px;
+
+            outline: none;
+
+            color: white;
+
+            background: rgba(255,255,255,0.07);
+
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .chat-input::placeholder {
+            color: #7f879d;
+        }
+
+        .send-btn {
+            padding: 0 22px;
+
+            border-radius: 12px;
+
+            color: white;
+
+            background: linear-gradient(
+                135deg,
+                #526dff,
+                #8757e8
+            );
+        }
+
+        .send-btn:hover {
+            transform: translateY(-2px);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar glass">
+
+        <div class="logo">
+            <span>&lt;/&gt;</span>
+            CodeHelp
+        </div>
+
+        <div class="nav-links">
+            <a href="/"> Home</a>
+            <a href="/problems-page">Problems</a>
+            <a href="/my-problems">My Problems</a>
+            <a href="/messages">Messages</a>
+            <div id="account-area"></div>
+        </div>
+
+    </nav>
+
+
+    <main class="chat-page">
+
+        <div class="chat-container glass">
+
+            <!-- Chat Header -->
+            <div class="chat-header">
+
+                <h2>💬 Private Chat</h2>
+
+                <p id="chat-info">
+                    Loading conversation...
+                </p>
+
+            </div>
+
+
+            <!-- Messages -->
+            <div
+                id="messages"
+                class="messages">
+
+                <p style="color:#8f98b1;">
+                    Loading messages...
+                </p>
+
+            </div>
+
+
+            <!-- Input -->
+            <div class="chat-input-area">
+
+                <input
+                    id="messageInput"
+                    class="chat-input"
+                    type="text"
+                    placeholder="Type your message..."
+                >
+
+                <button
+                    id="sendButton"
+                    class="send-btn">
+
+                    Send
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/chat.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Problems - CodeHelp</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar glass">
+
+    <div class="logo">
+        &lt;/&gt; CodeHelp
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/"> Home</a>
+
+        <a href="/problems-page">Problems</a>
+
+        <a href="/my-problems">
+            My Problems
+        </a>
+
+        <a href="/messages">
+            Messages
+        </a>
+
+        <div id="account-area"></div>
+
+    </div>
+
+</nav>
+
+
+<main class="page-container">
+
+    <div class="page-header">
+
+        <div>
+            <p class="eyebrow">YOUR ACTIVITY</p>
+
+            <h1>My Problems</h1>
+
+            <p class="page-subtitle">
+                Problems you have posted on CodeHelp.
+            </p>
+        </div>
+
+        <button
+            class="primary-btn"
+            onclick="window.location.href='/create-problem'">
+
+            Post Your First Problem
+
+        </button>
+
+    </div>
+
+
+    <div id="my-problems-container">
+
+        <div class="loading glass">
+            Loading your problems...
+        </div>
+
+    </div>
+
+</main>
+
+<script src="/js/app.js"></script>
+<script src="/js/my-problems.js"></script>
+
+</body>
+
+</html>
